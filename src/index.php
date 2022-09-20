@@ -9,8 +9,7 @@ class Index
     {
         return response()->json([
             '‘quotes’' => [
-                $page =>
-                    [$content]
+                 $page => $content
             ]
         ]);
     }
