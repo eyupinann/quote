@@ -1,7 +1,7 @@
 <?php
 
 
-namespace quote\Page;
+namespace eyupinann\Quote;
 
 class Index
 {
