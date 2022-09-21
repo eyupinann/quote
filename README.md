@@ -16,7 +16,7 @@ composer require eyupinann/quote
 ```php
 use eyupinann\Quote\Index;
 
-function App(Index $index) {
+public function App(Index $index) {
   return $index->page('Contact',['test@test.com','0505'])
 }
 ```
