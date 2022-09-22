@@ -11,7 +11,7 @@ composer require eyupinann/quote
 ```
 
 ## Usage
-
+Using this function, we send the page name and content to the relevant function and return it.
 
 ```php
 use eyupinann\Quote\Index;
