@@ -9,7 +9,14 @@ Use the package manager [package](https://packagist.org/packages/eyupinann/quote
 ```bash
 composer require eyupinann/quote
 ```
-
+We add this code to the providers part in config/app.php so we import the providers part of our package
+```php
+eyupinann\Quote\BlogPackageServiceProvider::class
+```
+We run our provider file with this command. Our migration and view files are created
+```bash
+php artisan vendor:publish --provider="eyupinann\Quote\BlogPackageServiceProvider" --tag="page"
+```
 ## Usage
 Using this function, we send the page name and content to the relevant function and return it.
 
@@ -17,7 +24,7 @@ Using this function, we send the page name and content to the relevant function 
 use eyupinann\Quote\Index;
 
 public function App(Index $index) {
-  return $index->page('Contact',['test@test.com','0505'])
+  return $index->page('About','info@google.com');
 }
 ```
 
