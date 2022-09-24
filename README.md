@@ -16,6 +16,8 @@ eyupinann\Quote\BlogPackageServiceProvider::class
 We run our provider file with this command. Our migration and view files are created
 ```bash
 php artisan vendor:publish --provider="eyupinann\Quote\BlogPackageServiceProvider" --tag="page"
+```
+```bash
 php artisan migrate
 ```
 ## Usage
