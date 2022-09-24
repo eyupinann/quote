@@ -16,6 +16,10 @@ class Index
     
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'news');
+        $this->loadViewsFrom(__DIR__ . '/../../views', 'news');
+
+        $this->publishes([
+            __DIR__ . '/../../views' => base_path('resources/views/vendor/news')
+        ]);
     }
 }
