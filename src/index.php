@@ -2,26 +2,24 @@
 
 
 namespace eyupinann\Quote;
-
+use eyupinann\Quote\Models\Pages;
 class Index
 {
-    public function page($page = 'contact us', $content = ['contact us','smks'] )
+    public function page($page , $content)
     {
-        return response()->json([
-            '‘quotes’' => [
-                 $page => $content
-            ]
+       $page = Pages::create([
+            'name' => $page,
+            'content' => $content,
         ]);
+
+        return redirect(route('new', $page));
+
+
+        return view('resources/views/vendor/new');
     }
 
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__ . '/../../views', 'new');
 
-        $this->publishes([
-            __DIR__ . '/../../views' => base_path('resources/views/vendor/new')
-        ]);
-
-        $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
     }
 }
