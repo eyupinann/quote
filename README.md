@@ -16,6 +16,7 @@ eyupinann\Quote\BlogPackageServiceProvider::class
 We run our provider file with this command. Our migration and view files are created
 ```bash
 php artisan vendor:publish --provider="eyupinann\Quote\BlogPackageServiceProvider" --tag="page"
+php artisan migrate
 ```
 ## Usage
 Using this function, we send the page name and content to the relevant function and return it.
