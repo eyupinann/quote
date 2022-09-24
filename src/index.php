@@ -13,13 +13,15 @@ class Index
             ]
         ]);
     }
-    
+
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__ . '/../../views', 'news');
+        $this->loadViewsFrom(__DIR__ . '/../../views', 'new');
 
         $this->publishes([
-            __DIR__ . '/../../views' => base_path('resources/views/vendor/news')
+            __DIR__ . '/../../views' => base_path('resources/views/vendor/new')
         ]);
+
+        $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
     }
 }
