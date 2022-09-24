@@ -13,4 +13,9 @@ class Index
             ]
         ]);
     }
+    
+    public function boot()
+    {
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'news');
+    }
 }
