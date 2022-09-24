@@ -3,4 +3,4 @@
 use Illuminate\Support\Facades\Route;
 use eyupinann\Quote\Index;
 
-Route::get('/posts/{$slug}', [Index::class, 'page'])->name('posts.index');
+Route::get('/page', [Index::class, 'page'])->name('new');

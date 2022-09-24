@@ -7,19 +7,14 @@ class Index
 {
     public function page($page , $content)
     {
-       $page = Pages::create([
+       Pages::create([
             'name' => $page,
             'content' => $content,
         ]);
 
-        return redirect(route('new', $page));
+        $page = Pages::where('name',$page)->first();
 
-
-        return view('resources/views/vendor/new');
-    }
-
-    public function boot()
-    {
+        return view('vendor.new.new',compact('page'));
 
     }
 }
